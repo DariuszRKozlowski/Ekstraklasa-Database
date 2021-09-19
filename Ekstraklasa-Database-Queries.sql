@@ -104,5 +104,58 @@ CREATE TABLE Players
 	nominal_position varchar(80) NOT NULL
 );
 
+/*
+	PLAYERS ROWS ADDING -> Players-Table-Data.sql file
+*/
 
+-- Typos fixing & correction
+UPDATE dbo.Players
+SET nationality = 'Czech Republic'
+WHERE nationality = 'Cech Republic';
 
+ALTER TABLE Players
+DROP COLUMN Age;
+
+-- Referees table creating
+CREATE TABLE Referees
+(
+	refereeID int NOT NULL IDENTITY(1,1) CONSTRAINT key_referee PRIMARY KEY,
+	first_name varchar(20) NOT NULL,
+	last_name varchar(30) NOT NULL
+);
+
+-- Matches table creating
+CREATE TABLE Matches
+(
+	gameweek smallint NOT NULL,
+	matchID varchar(7) NOT NULL CONSTRAINT key_matches PRIMARY KEY,
+	date date NOT NULL,
+	hostID varchar(3) NOT NULL CONSTRAINT fkey_club_matchesHost FOREIGN KEY REFERENCES dbo.Clubs(clubID),
+	guestID varchar(3) NOT NULL CONSTRAINT fkey_club_matchesGuest FOREIGN KEY REFERENCES dbo.Clubs(clubID),
+	goals_host int NOT NULL DEFAULT 0,
+	goals_guest int NOT NULL DEFAULT 0,
+	referee int NOT NULL CONSTRAINT fkey_referee_matches FOREIGN KEY REFERENCES dbo.Referees(refereeID),
+	frequency int
+);
+
+-- Referees inserting 
+INSERT INTO Referees VALUES
+('Zbigniew', 'Dobrynin'),
+('Bartosz', 'Frankowski'),
+('£ukasz', 'Szczech'),
+('Tomasz', 'Kwiatkowski'),
+('Damian', 'Kos'), 
+('Szymon', 'Marciniak'),
+('£ukasz', 'KuŸma'),
+('Jaros³aw', 'Przyby³'),
+('Piotr', 'Lasyk'),
+('Sebastian', 'Krasny'),
+('Pawe³', 'Gil'),
+('Damian', 'Sylwestrzak'),
+('Tomasz', 'Wajda'),
+('Sebastian', 'Jarzêbak'),
+('Pawe³', 'Malec'),
+('Wojciech', 'Myæ'),
+('Krzysztof', 'Jakubik'),
+('Pawe³', 'Raczkowski'),
+('Tomasz', 'Musia³');
