@@ -612,3 +612,6 @@ WHERE playerID = 'ŒL¥#20';
 
 INSERT INTO Players VALUES
 ('RAD#08', 'RAD', 'Rhuan', 'da Silveira Castro', '25-01-2000', 'Brazil', '30-06-2024', 'Left Winger');
+
+INSERT INTO Players VALUES
+('RAD#12', 'RAD', 'Mateusz', 'Kochalski', '25-07-2000', 'Poland', '30-06-2022', 'Goalkeeper');
