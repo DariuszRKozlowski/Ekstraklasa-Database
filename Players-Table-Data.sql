@@ -591,3 +591,21 @@ WHERE clubID = 'ŒL¥' AND first_name = 'Caye' AND last_name = 'Quintana';
 UPDATE dbo.Players
 SET playerID = 'GÓR#06' 
 WHERE clubID = 'GÓR' AND last_name = 'Kubica' AND first_name = 'Krzysztof';
+
+UPDATE DBO.Players
+SET playerID = 'GK£#11'
+WHERE clubID = 'GK£' AND last_name = 'Tkacz' AND birth_date = '25-01-2005';
+
+INSERT INTO Players VALUES
+('RAD#29', 'RAD', 'Raphael', 'Blanco', '25-07-1990', 'Brazil', '30-06-2024', 'Centre-Back');
+
+INSERT INTO Players VALUES
+('ŒL¥#24', 'ŒL¥', 'Caye', 'Quintana', '20-12-1993', 'Spain', '30-06-2024', 'Centre-Forward');
+
+UPDATE Stats
+SET playerID = 'ŒL¥#24'
+WHERE statID LIKE '%ŒL¥#20';
+
+DELETE 
+FROM Players
+WHERE playerID = 'ŒL¥#20';
