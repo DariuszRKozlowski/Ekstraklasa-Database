@@ -637,3 +637,42 @@ INSERT INTO Players VALUES
 INSERT INTO Players VALUES
 ('LEG#92', 'LEG', 'Bar³omiej', 'Ciepiela', '24-05-2001', 'Poland', NULL, 'Attacking Midfield'),
 ('LEG#05', 'LEG', 'Yuri', 'Ribeiro', '24-01-1997', 'Portugal', '30-06-2024', 'Left-Back');
+
+INSERT INTO Players VALUES
+('WAR#77', 'WAR', 'Jayson', 'Papeau', '30-06-1996', 'France', '30-06-2023', 'Attacking Midfield');
+
+INSERT INTO Players VALUES
+('GÓR#23', 'GÓR', 'Jean Jules', 'Sepp Mvondo', '23-04-1998', 'Cameroon', '30-06-2022', 'Central Midfield');
+
+INSERT INTO Players VALUES
+('JAG#16', 'JAG', 'Micha³', '¯yro', '20-09-1992', 'Poland', '30-06-2022', 'Centre-Forward');
+
+UPDATE Stats
+SET playerID='JAG#16'
+WHERE playerID='PIA#11';
+
+INSERT INTO Players VALUES
+('STM#18', 'STM', 'Dawid', 'Kort', '29-04-1995', 'Poland', '30-06-2022', 'Central Midfield'),
+('STM#45', 'STM', 'Konrad', 'Wrzesiñski', '10-09-1993', 'Poland', NULL, 'Right Winger');
+
+DELETE FROM Players WHERE playerID='LEG#07';
+
+INSERT INTO Players VALUES
+('LEG#07', 'LEG', 'Lirim', 'Kastrati', '16-01-1999', 'Kosovo', '30-06-2025', 'Right Winger'),
+('LEG#14', 'LEG', 'Igor', 'Kharatin', '02-02-1995', 'Ukraine', '30-06-2024', 'Defensive Midfield');
+
+INSERT INTO Players VALUES
+('PIA#29', 'PIA', 'Nikola', 'Stojiljkovic', '17-08-1992', 'Serbia', '30-06-2023', 'Centre-Forward');
+
+INSERT INTO Players VALUES
+('RCZ#88', 'RCZ', 'Valeriane', 'Gvilia', '24-05-1994', 'Georgia', '30-06-2023', 'Attacking Midfield'),
+('LPO#50', 'LPO', 'Adriel', 'Ba Loua', '25-07-1996', 'Ivory Coast', '30-06-2025', 'Right Winger');
+
+INSERT INTO Players VALUES
+('GK£#17', 'GK£', '£ukasz', 'Szramowski', '01-04-2002', 'Poland', '30-06-2024', 'Central Midfield'),
+('GK£#70', 'GK£', 'Jason', 'Eyenga-Lokilo', '17-09-1998', 'Belgium', '30-06-2023', 'Right Winger'),
+('GK£#88', 'GK£', 'Alex', 'Serrano', '06-02-1995', 'Spain', '30-06-2023', 'Central Midfield'),
+('GK£#13', 'GK£', 'Marcel', 'Wêdrychowski', '13-01-2002', 'Poland', '30-06-2024', 'Left Winger');
+
+INSERT INTO Players VALUES
+('RAD#53', 'RAD', 'Tiago', 'Matos', '22-01-2001', 'Portugal', '30-06-2024', 'Defensive Midfield');
