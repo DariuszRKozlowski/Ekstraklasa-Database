@@ -159,3 +159,20 @@ INSERT INTO Referees VALUES
 ('Krzysztof', 'Jakubik'),
 ('Pawe³', 'Raczkowski'),
 ('Tomasz', 'Musia³');
+
+-- Stats table creating
+CREATE TABLE Stats
+(
+	statID varchar(14) NOT NULL CONSTRAINT key_stats PRIMARY KEY,
+	matchID varchar(7) NOT NULL CONSTRAINT fkey_matches_statsMatchID FOREIGN KEY REFERENCES dbo.Matches(matchID),
+	gameweek smallint NOT NULL,
+	playerID varchar(6) NOT NULL CONSTRAINT fkey_players_stats FOREIGN KEY REFERENCES dbo.Players(playerID),
+	rivalID varchar(3) NOT NULL CONSTRAINT fkey_clubs_stats	FOREIGN KEY REFERENCES dbo.Clubs(clubID),
+	game_minutes int DEFAULT 0,
+	goals smallint DEFAULT 0,
+	assists smallint DEFAULT 0,
+	clean_sheet bit DEFAULT NULL,
+	own_goal bit DEFAULT NULL,
+	yellow_card bit DEFAULT 0,
+	red_card bit DEFAULT 0
+);

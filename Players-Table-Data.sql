@@ -577,3 +577,17 @@ INSERT INTO dbo.Players VALUES
 ('ZAG#13', 'ZAG', 'Karol', 'Podliñski', '06-11-1997', 'Poland', 23, '30-06-2023', 'Centre-Forward'),
 ('ZAG#19', 'ZAG', 'Daniel', 'Dudziñski', '07-03-2002', 'Poland', 19, '30-06-2023', 'Centre-Forward'),
 ('ZAG#21', 'ZAG', 'Tomasz', 'Pieñko', '05-01-2004', 'Poland', 17, '30-06-2023', 'Centre-Forward');
+
+INSERT INTO Players VALUES
+('LEG#12', 'LEG', 'Mateusz', 'Kochalski', '25-07-2000', 'Poland', '30-06-2022', 'Goalkeeper');
+
+INSERT INTO Players VALUES
+('ŒL¥#18', 'ŒL¥', 'Lubambo', 'Musonda', '01-03-1995', 'Zambia', '30-06-2024', 'Right Winger');
+
+UPDATE dbo.Players
+SET playerID = 'ŒL¥#20'
+WHERE clubID = 'ŒL¥' AND first_name = 'Caye' AND last_name = 'Quintana';
+
+UPDATE dbo.Players
+SET playerID = 'GÓR#06' 
+WHERE clubID = 'GÓR' AND last_name = 'Kubica' AND first_name = 'Krzysztof';
