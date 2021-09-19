@@ -609,3 +609,6 @@ WHERE statID LIKE '%ŒL¥#20';
 DELETE 
 FROM Players
 WHERE playerID = 'ŒL¥#20';
+
+INSERT INTO Players VALUES
+('RAD#08', 'RAD', 'Rhuan', 'da Silveira Castro', '25-01-2000', 'Brazil', '30-06-2024', 'Left Winger');
