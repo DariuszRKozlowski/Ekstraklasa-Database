@@ -176,3 +176,41 @@ CREATE TABLE Stats
 	yellow_card bit DEFAULT 0,
 	red_card bit DEFAULT 0
 );
+
+CREATE TABLE Coaches
+(
+	coachID	int NOT NULL IDENTITY(1,1) CONSTRAINT key_coaches PRIMARY KEY,
+	club varchar(3) CONSTRAINT fkey_clubs_coaches FOREIGN KEY REFERENCES Clubs(clubID),
+	first_name varchar(20) NOT NULL,
+	last_name varchar(30) NOT NULL,
+	nationality varchar(30) NOT NULL,
+	birthdate date NOT NULL
+	);
+
+INSERT INTO Coaches VALUES
+('BBT', 'Mariusz', 'Lewandowski', 'Poland', '18-05-1979'),
+('CRA', 'Micha³', 'Probierz', 'Poland', '24-09-1972'),
+('GK£', 'Kamil', 'Kiereœ', 'Poland', '16-07-1974'),
+('GÓR', 'Jan', 'Urban', 'Poland', '14-05-1962'),
+('JAG', 'Ireneusz', 'Mamrot', 'Poland', '13-12-1970'),
+('LEG', 'Czes³aw', 'Michniewicz', 'Poland', '12-02-1970'),
+('LGD', 'Piotr', 'Stokowiec', 'Poland', '25-05-1972'),
+('LPO', 'Maciej', 'Skor¿a', 'Poland', '10-01-1972'),
+('PIA', 'Waldemar', 'Fornalik', 'Poland', '11-04-1963'),
+('POG', 'Kosta', 'Runjaic', 'Germany', '04-06-1971'),
+('RAD', 'Dariusz', 'Banasik', 'Poland', '16-07-1973'),
+('RCZ', 'Marek', 'Papszun', 'Poland', '08-08-1974'),
+('STM', 'Adam', 'Majewski', 'Poland', '24-12-1973'),
+('ŒL¥', 'Jacek', 'Magiera', 'Poland', '01-01-1977'),
+('WAR', 'Piotr', 'Tworek', 'Poland', '10-03-1975'),
+('WIS', 'Adrian', 'Gula', 'Slovakia', '29-06-1975'),
+('WP£', 'Maciej', 'Bartoszek', 'Poland', '12-04-1977'),
+('ZAG', 'Dariusz', '¯uraw', 'Poland', '14-11-1972');
+
+UPDATE Coaches
+SET club = NULL
+WHERE last_name = 'Stokowiec';
+
+INSERT INTO Coaches
+VALUES
+('LGD', 'Tomasz', 'Kaczmarek', 'Poland', '20-09-1984');

@@ -615,3 +615,25 @@ INSERT INTO Players VALUES
 
 INSERT INTO Players VALUES
 ('RAD#12', 'RAD', 'Mateusz', 'Kochalski', '25-07-2000', 'Poland', '30-06-2022', 'Goalkeeper');
+
+INSERT INTO Players VALUES
+('STM#22', 'STM', 'Koki', 'Hinokio', '26-02-2001', 'Japan', '30-06-2022', 'Attacking Midfield'),
+('STM#99', 'STM', 'Fabian', 'Piasecki', '04-05-1995', 'Poland', '30-06-2022', 'Centre-Forward'),
+('STM#77', 'STM', 'Adrian', 'Szczutowski', '19-09-2000', 'Poland', '30-06-2022', 'Centre-Forward');
+
+INSERT INTO Players VALUES
+('CRA#38', 'CRA', 'Jakub', 'Myszor', '07-06-2002', 'Poland', '30-06-2022', 'Right Winger'),
+('CRA#26', 'CRA', 'Filip', 'Piszczek', '26-05-1995', 'Poland', '30-06-2022', 'Centre-Forward'),
+('CRA#64', 'CRA', 'Micha³', 'Wiœniewski', '02-05-1999', 'Poland', '30-06-2021', 'Left Midfield');
+
+INSERT INTO Players VALUES
+('POG#11', 'POG', 'Kamil', 'Grosicki', '08-06-1988', 'Poland', '30-06-2023', 'Left Winger'),
+('LPO#05', 'LPO', 'Pedro', 'Rebocho', '23-01-1995', 'Portugal', '30-06-2023', 'Left-Back');
+
+INSERT INTO Players VALUES
+('ZAG#20', 'ZAG', 'Ilya', 'Zhigulev', '01-02-1996', 'Russia', '30-06-2023', 'Central Midfield'),
+('ZAG#31', 'ZAG', 'Dawid', 'Pakulski', '23-07-1998', 'Poland', NULL, 'Central Midfield');
+
+INSERT INTO Players VALUES
+('LEG#92', 'LEG', 'Bar³omiej', 'Ciepiela', '24-05-2001', 'Poland', NULL, 'Attacking Midfield'),
+('LEG#05', 'LEG', 'Yuri', 'Ribeiro', '24-01-1997', 'Portugal', '30-06-2024', 'Left-Back');
