@@ -1,3 +1,4 @@
+USE [Ekstraklasa 21/22];
 SET DATEFORMAT dmy;
 
 -- BBT players
@@ -696,3 +697,31 @@ DELETE FROM Players WHERE playerID = 'JAG#31';
 
 UPDATE Stats
 SET yellow_card = 1 WHERE statID = 'POG-CRA:CRA#33';
+
+UPDATE Stats
+SET goals = 1 
+WHERE statID LIKE 'GÓR-LPO:%' AND (playerID = 'LPO#07' OR playerID = 'LPO#09' OR playerID = 'LPO#21');
+
+UPDATE Stats
+SET assists = 1
+WHERE statID LIKE 'GÓR-LPO:%' AND (playerID = 'LPO#07' OR playerID = 'LPO#24' OR playerID = 'LPO#02');
+
+UPDATE Stats
+SET goals = 0
+WHERE statID LIKE 'WAR-POG:%' AND playerID = 'POG#08'; 
+
+UPDATE Stats
+SET goals = 1
+WHERE statID LIKE 'WAR-POG:%' AND playerID = 'POG#14'; 
+
+UPDATE Stats
+SET goals = 0, assists = 1
+WHERE playerID = 'ZAG#08' AND statID = 'ZAG-GK£:ZAG#08';
+
+UPDATE Stats
+SET clean_sheet = 0
+WHERE playerID IN ('LEG#23', 'LEG#30', 'LEG#59') AND statID LIKE 'WAR-LEG:LEG%';
+
+UPDATE Stats
+SET goals = 1
+WHERE matchID = 'LEG-GK£' AND playerID = 'GK£#18';

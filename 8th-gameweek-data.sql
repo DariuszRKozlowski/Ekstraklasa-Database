@@ -1,5 +1,3 @@
-SELECT * FROM Referees;
-
 -- 8th gameweek matches data
 INSERT INTO Matches	VALUES
 (8, 'ZAG-BBT', '17-09-2021', 'ZAG', 'BBT', 2, 1, (SELECT refereeID FROM Referees WHERE last_name = 'Przyby³'), 2151),
