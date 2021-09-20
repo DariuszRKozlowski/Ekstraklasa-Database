@@ -214,3 +214,6 @@ WHERE last_name = 'Stokowiec';
 INSERT INTO Coaches
 VALUES
 ('LGD', 'Tomasz', 'Kaczmarek', 'Poland', '20-09-1984');
+
+INSERT INTO Referees VALUES
+('Mariusz', 'Z³otek');

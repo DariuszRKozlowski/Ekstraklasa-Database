@@ -676,3 +676,23 @@ INSERT INTO Players VALUES
 
 INSERT INTO Players VALUES
 ('RAD#53', 'RAD', 'Tiago', 'Matos', '22-01-2001', 'Portugal', '30-06-2024', 'Defensive Midfield');
+
+INSERT INTO Players VALUES
+('PIA#98', 'PIA', 'Alexandros', 'Katranis', '04-05-1998', 'Greece', '30-06-2024', 'Left-Back');
+
+INSERT INTO Players VALUES
+('GÓR#18', 'GÓR', 'David', 'Tosevski', '16-07-2001', 'North Macedonia', '30-06-2025', 'Centre-Forward');
+
+INSERT INTO Players VALUES
+('LEG#16', 'LEG', 'Jurgen', 'Celhaka', '06-12-2000', 'Albania', '30-06-2025', 'Central Midfield');
+
+INSERT INTO Players VALUES
+('JAG#09', 'JAG', 'Bartosz', 'Bida', '21-02-2001', 'Poland', '30-06-2023','Centre-Forward');
+
+UPDATE Stats
+SET playerID = 'JAG#09' WHERE playerID = 'JAG#31';
+
+DELETE FROM Players WHERE playerID = 'JAG#31';
+
+UPDATE Stats
+SET yellow_card = 1 WHERE statID = 'POG-CRA:CRA#33';
