@@ -725,3 +725,11 @@ WHERE playerID IN ('LEG#23', 'LEG#30', 'LEG#59') AND statID LIKE 'WAR-LEG:LEG%';
 UPDATE Stats
 SET goals = 1
 WHERE matchID = 'LEG-GK£' AND playerID = 'GK£#18';
+
+UPDATE Stats
+SET playerID = 'BBT#11'
+WHERE matchID = 'BBT-STM' AND statID = 'BBT-STM:BBT#11';
+
+UPDATE Stats
+SET playerID = 'BBT#97'
+WHERE matchID = 'BBT-STM' AND statID = 'BBT-STM:BBT#97';

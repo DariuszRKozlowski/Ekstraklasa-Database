@@ -194,3 +194,31 @@ WHERE S.playerID = P.playerID
 GROUP BY P.last_name, P.first_name, P.clubID
 ORDER BY [Red cards] DESC, [Yellow cards] DESC);
 GO 
+
+CREATE VIEW vGoalsAndAssists AS 
+(SELECT TOP 15 (P.first_name + ' ' + P.last_name) AS Player, P.clubID AS Club, SUM(goals) + SUM(assists) AS Points
+FROM Stats AS S, Players AS P
+WHERE S.playerID = P.playerID
+GROUP BY P.last_name, P.first_name, P.clubID
+ORDER BY Points DESC);
+GO
+
+CREATE VIEW vOldestPlayers AS
+(SELECT TOP 10 first_name, last_name, birth_date ,FLOOR(DATEDIFF(HOUR, birth_date, CAST(GETDATE() AS DATE))/8766) AS 'Age'
+FROM Players
+ORDER BY birth_date);
+GO
+
+CREATE VIEW vYoungestPlayers AS
+(SELECT TOP 10 first_name, last_name, birth_date ,FLOOR(DATEDIFF(HOUR, birth_date, CAST(GETDATE() AS DATE))/8766) AS 'Age'
+FROM Players
+ORDER BY birth_date DESC);
+GO
+
+CREATE VIEW vMostMinutes AS
+(SELECT TOP 20 P.first_name, P.last_name, P.clubID, P.nominal_position, SUM(game_minutes) AS 'Minutes played'
+FROM Stats AS S, Players AS P
+WHERE S.playerID = P.playerID
+GROUP BY nominal_position, clubID, last_name, first_name
+ORDER BY 'Minutes played' DESC);
+GO
