@@ -733,3 +733,9 @@ WHERE matchID = 'BBT-STM' AND statID = 'BBT-STM:BBT#11';
 UPDATE Stats
 SET playerID = 'BBT#97'
 WHERE matchID = 'BBT-STM' AND statID = 'BBT-STM:BBT#97';
+
+INSERT INTO Players VALUES
+('ZAG#02', 'ZAG', 'Aleksandar', 'Pantic', '11-04-1992', 'Serbia', '30-06-2022', 'Centre-Back');
+
+INSERT INTO Players VALUES
+('WP£#91', 'WP£', 'Tomasz', 'Walczak', '17-08-2005', 'Poland', '30-06-2023', 'Centre-Forward');
