@@ -2,13 +2,13 @@
 Series of SQL scripts dedicated to storage and analyse data of Polish Football League - Ekstraklasa.
 
 ## Table of contents
-* [General informations](#general-informations)
+* [Introduction](#introduction)
 * [Technology](#technology)
 * [Setup](#setup)
 * [Sources](#sources)
 * [Status](#status)
 
-## General informations
+## Introduction
 The aim of this project is present data from football fields by numbers on the screen. It might be interesting for every football fan to check
 informations about favorite player or team. Thanks to database structure, user can check information about:
 * Clubs,
