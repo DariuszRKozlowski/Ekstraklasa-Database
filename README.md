@@ -28,7 +28,7 @@ To create full structure of database is necessary to execute first `Ekstraklasa-
 
 This sql script consists structure of all data tables and provides inserting basic informations about clubs, clubs coaches and referees.
 
-Next step is inserting into Players table data about footballers. It's possible by executing `Players-Table-Data`.
+Next step is inserting into Players table data about footballers. It's possible by executing `Players-Table-Data.sql`.
 
 Informations about every single gameweek (matches, statistics) are in `x-gameweek-data.sql` scripts. By inserting data about matches and 
 statistics is possible to create interesting reports. Basic ones might be found in script `Ekstraklasa-ratings.sql`.
