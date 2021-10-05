@@ -1,6 +1,3 @@
-SELECT * FROM Stats;
-
-
 INSERT INTO Matches
 VALUES
 (9, 'GK£-LGD', '24-09-2021', 'GK£', 'LGD', 0, 4, (select refereeID from Referees WHERE last_name = 'Sylwestrzak'), 2499),
